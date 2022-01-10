@@ -43,7 +43,7 @@ const Forms: React.FC = () => {
       setIsLoading(true)
       const headers = new Headers()
       headers.append("Content-Type", "application/json")
-      headers.append("Authorization", sessionToken ? sessionToken : "")
+      headers.append("Authorization", sessionToken)
       fetch(process.env.REACT_APP_API_ENDPOINT + "/forms/all", {
         method: "GET",
         headers: headers,
@@ -58,6 +58,7 @@ const Forms: React.FC = () => {
           setIsLoading(false)
         })
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   if (isLoading) {
