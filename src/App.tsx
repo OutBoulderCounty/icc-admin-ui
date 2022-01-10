@@ -1,5 +1,4 @@
 import React from "react"
-// import Dashboard from './components/dash';
 import Login from "./components/login"
 import Footer from "./components/footer"
 import NavBar from "./components/navBar"
@@ -21,7 +20,6 @@ const App: React.FC = () => {
           path="/"
           element={
             <ProtectedRoute>
-              {/* <Dashboard /> */}
               <Forms />
             </ProtectedRoute>
           }
